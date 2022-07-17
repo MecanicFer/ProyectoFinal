@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;421;500;600;700&family=Edu+SA+Beginner&display=swap');
+* {  /* este apartado es para alinear todo el documento a la izquierda*/
+    margin: 0px;
+    padding: 0px;
+}
+body {  /* este apartado es para darle color al fondo*/
+    background: white;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+p {
+    margin-top: 15px;
+}
+hr {  /* este apartado es para colocarle margenes de color naranja a la imagen */
+    background-color: orange;
+    height: 15px;
+    margin-bottom: -2px;
+    margin-top: -2px;
+}
+#header {  /*se escribe # para darle estilo a todo el ID */
+    margin: 0px 0px;  /* con este y el width se le da un ancho y un margen al menú*/
+    width: 500px;
+    position: fixed;  /* Este atributo permite que el menú sea flotante, es decir si vas bajando al contenido de la pagina el menú va bajando tambien*/
+    z-index: 2;  /* este atributo +2 permite que el menú este por encima de la imagen*/
+    text-align: right;  /* este atributo lo acomoda a la derecha*/
+}
+ul {
+    list-style: none;  /* Esto es para que el menú no sea una lista sino que quede uno al lado del otro*/
+
+}
+.nav li a{  /* Este se utiliza para que todo lo que este contenido en un <a></a> tenga el siguiente estilo*/
+    background-color: black;
+    color: white;  /* color de letras */
+    text-decoration: none;  /* este elimina el estilo Hipervinculo, es decir, los subrayados*/
+    padding: 10px 15px;  /* este le va a dar separación en el texto de cada opcion del menú */ 
+    display: block;
+}
+.nav li a:hover {  /* Este permite que al posicionar el mouse en el hipervinculo del menu se coloque de color gris*/
+    background-color: gray;
+}
+.nav > li {  /* Este permite tirar a la izquierda las opciones del menu las del submenu quedan a la derecha*/
+    float: left;
+} 
+.nav li ul {  /* Este modifica los submenu */
+    display: none;  /* esto los hace invisibles en la vista principal*/
+    position: absolute;
+    min-width: 140px;
+}
+.nav li:hover > ul {  /* Este permite que al posicionar el mouse se despliegue el submenu*/
+    display: block;
+}
+.nav li ul li {  /* este trabaja en conjunto con el codigo anterior */
+    position: relative;
+}
+.nav li ul li ul {  /* Este coloca hacia la derecha el submenu de la opcion pedidos*/
+    right: -140px;
+    top: 0px;
+}
+.imagen {
+    z-index: 1;
+    position: relative;
+    margin: 0px;
+}
+h1 { /* Este coloca el texto en el centro del parrafo*/
+    text-align: center;
+}
+h2 { /* Este coloca el texto en el centro del parrafo*/
+    text-align: center;
+}
+.texto { /* Este le coloca margenes al texto y lo justifica*/
+    z-index: 1;
+    position: relative;
+    margin: 20px 30px 0px 30px;
+    text-align: justify;
+}
